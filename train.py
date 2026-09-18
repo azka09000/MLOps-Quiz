@@ -27,7 +27,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 models = {
     "Logistic Regression": Pipeline([
         ("scaler", StandardScaler()),
-        ("model", LogisticRegression(max_iter=2000, random_state=42))
+        ("model", LogisticRegression(max_iter=2000, solver="liblinear", random_state=42))
     ]),
     "Random Forest": RandomForestClassifier(
         n_estimators=100,
